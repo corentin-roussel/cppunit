@@ -47,7 +47,7 @@ jobs:
 
       - name: Push images
         run: |
-          docker push cppunit:${{ github.ref_name }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/cppunit:${{ github.ref_name }}
 
   notify:
     runs-on: ubuntu-latest
