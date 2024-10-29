@@ -43,7 +43,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t cppunit:${{ github.ref_name }} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/cppunit:${{ github.ref_name }} .
 
       - name: Push images
         run: |
